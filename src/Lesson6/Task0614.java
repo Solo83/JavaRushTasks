@@ -20,7 +20,7 @@ public class Task0614 {
 
     public static ArrayList <Task0614> cats = new ArrayList<>();
 
-    public Cat() {
+    public Task0614() {
 
     }
 
