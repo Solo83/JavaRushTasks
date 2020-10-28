@@ -56,30 +56,23 @@ public class Task0930 {
             System.out.println(x);
         }
     }
-
     public static void sort(String[] array) {
-
-        for (int i = 0; i < array.length-1; i++) {
-            for (int j = i; j < array.length-1; j++) {
-                if (!isNumber(array[i])) {
-                    if (!isNumber(array[j+1])){
-                        if (isGreaterThan(array[i], array[j+1])) {
-                            String temp = array[i];
-                            array[i] = array[j+1];
-                            array[j+1] = temp;
-                        }}
-
-                } else { if (isNumber(array[j+1])){
-
-                    if (Integer.parseInt(array[i]) < Integer.parseInt(array[j+1])){
-                        String temp = array[i];
-                        array[i] = array[j+1];
-                        array[j+1] = temp;
-                    }}}
+        for (int i = 0; i<array.length; i++) {
+            for (int k=i+1; k<array.length; k++) {
+                if (!isNumber(array[i])){
+                    if(!isNumber(array[k])){
+                        if (isGreaterThan(array[i], array[k])){
+                            swap (array, i,k);
+                        }
+                    }}
+                else {if (isNumber(array[k])) {
+                    if (Integer.parseInt(array[i])<Integer.parseInt(array[k])) {
+                        swap (array, i,k);
+                    }
+                }}
             }
         }
     }
-
 
     // Метод для сравнения строк: 'а' больше чем 'b'
     public static boolean isGreaterThan(String a, String b) {
@@ -115,4 +108,11 @@ public class Task0930 {
 
         return true;
     }
+
+    public static void swap (String [] array, int i, int k) {
+        String temp = array[i];
+        array[i] = array[k];
+        array[k] = temp;
+    }
+
 }
