@@ -39,7 +39,7 @@ public class Task0921 {
                 list.add(Integer.parseInt(reader.readLine()));
             }
         } catch (Exception e) {
-            for (var num: list) {
+            for (Integer num: list) {
                 System.out.println(num);
             }
         }

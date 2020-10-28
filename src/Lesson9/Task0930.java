@@ -42,14 +42,14 @@ import java.util.ArrayList;
 
 public class Task0930 {
     public static void main(String[] args) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> list = new ArrayList<>();
-        while (reader.ready()) {
-            String s = reader.readLine();
-            list.add(s);
-        }
+       // BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+     //   ArrayList<String> list = new ArrayList<>();
+     //   while (reader.ready()) {
+      //      String s = reader.readLine();
+      //      list.add(s);
+      //  }
 
-        String[] array = list.toArray(new String[0]);
+        String[] array = {"Вишня","1","Боб","3","Яблоко","22","0","Арбуз"};
         sort(array);
 
         for (String x : array) {
